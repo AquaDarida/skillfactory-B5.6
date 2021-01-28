@@ -28,13 +28,16 @@ def CheckWin(_gameBoard, _winPosition):
 
 def CalculatePosition(_allowPositions):
     position = input("Choose position: ")
+
+    positionX, positionY = 0, 0
+
     if len(position) == 3:
         positionX = int(position[0]) - 1
         positionY = int(position[2]) - 1
 
     while 3 * positionX + positionY not in _allowPositions or len(position) != 3:
         print("Incorrect input. Try again!!!\n")
-        position = input("Choose position")
+        position = input("Choose position: ")
         positionX = int(position[0]) - 1
         positionY = int(position[2]) - 1
 
